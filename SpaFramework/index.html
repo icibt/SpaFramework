@@ -9,21 +9,32 @@
         <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
         <link href="Content/font-awesome.min.css" rel="stylesheet" />
         <link href="app/app.css" rel="stylesheet" />
-    
+
+        <link href="ext-modules/srcMenu/srcMenu.css" rel="stylesheet" />
+
         <script src="Scripts/jquery-2.1.4.min.js"></script>
-        <script src="Scripts/angular.min.js"></script>
+        <script src="Scripts/angular.js"></script>
 
         <script src="ext-modules/srcMenu/srcMenuModule.js"></script>
+        <script src="ext-modules/srcMenu/srcMenuController.js"></script>
+        <script src="ext-modules/srcMenu/srcMenuDirective.js"></script>
+        <script src="ext-modules/srcMenu/srcMenuItemDirective.js"></script>
+
         <script src="ext-modules/srcDashboard/srcDashboardModule.js"></script>
         <script src="ext-modules/srcFramework/srcFrameworkModule.js"></script>
         <script src="ext-modules/srcFramework/srcFrameworkController.js"></script>
         <script src="ext-modules/srcFramework/srcFrameworkDirective.js"></script>
+
         <script src="app/appModule.js"></script>
         <script src="app/appConfig.js"></script>
     </head>
     <body class="container-fluid">
-        
-        
-        <src-framework title="Whitewater Adventures" subtitle="Administrative application" icon-file="images/angular-icon.png"></src-framework>
+        <src-framework title="Whitewater Adventures" subtitle="Administrative application" icon-file="images/angular-icon.png">
+            <src-menu>
+                <src-menu-item label="Dashboard" icon="fa-dashboard" route="dashboard"></src-menu-item>
+                <src-menu-item label="Locations" icon="fa-location-arrow" route="locations"></src-menu-item>
+                <src-menu-item label="Raft guides" icon="fa-user" route="guides"></src-menu-item>
+            </src-menu>
+        </src-framework>
     </body>
 </html>
