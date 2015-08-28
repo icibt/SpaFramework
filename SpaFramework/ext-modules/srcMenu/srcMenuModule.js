@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('srcMenu',[]);
+    angular.module('srcMenu',['ngAnimate']);
 
     //srcMenuModule.$inject = ['$http'];
 

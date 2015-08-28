@@ -3,9 +3,18 @@
     background-color: #333;
     color: #ccc;
     padding-left: 0;
+
+}
+
+.src-menu-area-vertical {
     width: 200px;
     min-height: 100vh;
     padding-top: 30px;
+}
+
+.src-menu-area-horizontal {
+    width: 100%;
+    height: 40px;
 }
 
 .src-menu-area ul {
@@ -19,6 +28,14 @@
 .src-menu {
     list-style-type: none;
     vertical-align: top;
+}
+
+.src-popup-menu {
+    position: absolute;
+    z-index: 1000;
+    background-color: #333;
+    width: 200px;
+    padding-left: 0;
 }
 
 .src-menu ul {
@@ -60,3 +77,47 @@
     user-select: none;
 }
 
+.src-group-indicator-left {
+    float: right;
+    color: #ddd;
+    margin-right: 2px;
+    margin-top: 15px;
+}
+
+.src-subitem-section {
+    padding-left: 16px;
+}
+
+.src-menu-layout-button {
+    margin: 12px;
+    padding: 2px 8px;
+    color: #bbb;
+    background-color: #333;
+    border: 1px solid #999;
+}
+
+.src-layout-button-horizontal {
+    position: absolute;
+    top: -6px;
+    right: 10px;
+}
+
+.src-item-horizontal {
+    display: inline-block;
+    width: 165px !important;
+    margin-left: 20px;
+    margin-top: 5px;
+    line-height: 1.5em !important;
+}
+
+.src-fade-in-animation {
+    -webkit-transition: linear all 0.5s;
+    -moz-transition: linear all 0.5s;
+    -ms-transition: linear all 0.5s;
+    -o-transition: linear all 0.5s;
+    transition: linear all 0.5s;
+}
+.src-fade-in-animation.ng-hide {
+    -ms-opacity: 0;
+    opacity: 0;
+}

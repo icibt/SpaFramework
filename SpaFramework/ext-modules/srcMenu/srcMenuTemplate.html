@@ -1,3 +1,6 @@
-﻿<div class="src-menu-area" ng-show="showMenu">
+﻿<div class="src-menu-area" ng-show="showMenu" ng-class="{'src-menu-area-vertical' : isVertical, 'src-menu-area-horizontal' : !isVertical}">
     <ul class="src-menu" ng-transclude></ul>
+    <a class="button src-menu-layout-button" ng-if="allowHorizontalToggle" ng-class="{'src-layout-button-horizontal' : !isVertical}" ng-click="toggleMenuOrientation()">
+        <i class="fa" ng-class="{'fa-chevron-up' : isVertical, 'fa-chevron-left' : !isVertical}"></i>
+    </a>
 </div>

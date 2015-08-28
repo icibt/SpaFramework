@@ -11,24 +11,32 @@
         /* jshint validthis:true */
         var vm = this;
         $scope.isMenuVisible = true;
+        $scope.isMenuVertical = true;
 
         $scope.menuButtonClicked = function() {
             $scope.isMenuVisible = !$scope.isMenuVisible;
             broadcastMenuState();
-            //$scope.$apply();
+            $scope.$apply();
         };
 
         var broadcastMenuState = function() {
             $rootScope.$broadcast('src-menu-show', {
-                show: $scope.isMenuVisible
+                show: $scope.isMenuVisible,
+                isVertical: $scope.isMenuVertical,
+                allowHorizontalToggle: !$scope.isMenuButtonVisible
             });
         };
 
         $scope.isMenuButtonVisible = true;
-        $scope.$on('src-menu-item-selected-event', function(evt,data) {
+
+        $scope.$on('src-menu-item-selected-event', function (evt, data) {
             $scope.routeString = data.route;
             checkWidth();
             broadcastMenuState();
+        });
+
+        $scope.$on('src-menu-orientation-changed-event', function (evt, data) {
+            $scope.isMenuVertical = data.isMenuVertical;
         });
 
         $($window).on('resize.srcFramework', function() {
