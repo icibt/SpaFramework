@@ -5,9 +5,9 @@
         .module('srcFramework')
         .controller('srcFrameworkController', srcFrameworkController);
 
-    srcFrameworkController.$inject = ['$scope','$window','$timeout','$rootScope']; 
+    srcFrameworkController.$inject = ['$scope','$window','$timeout','$rootScope','$location']; 
 
-    function srcFrameworkController($scope,$window,$timeout,$rootScope) {
+    function srcFrameworkController($scope,$window,$timeout,$rootScope,$location) {
         /* jshint validthis:true */
         var vm = this;
         $scope.isMenuVisible = true;
@@ -31,6 +31,7 @@
 
         $scope.$on('src-menu-item-selected-event', function (evt, data) {
             $scope.routeString = data.route;
+            $location.path(data.route);
             checkWidth();
             broadcastMenuState();
         });

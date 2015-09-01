@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('app', ['srcFramework']);
+    angular.module('app', ['srcFramework','ngRoute']);
        
 
    

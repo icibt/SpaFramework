@@ -7,6 +7,7 @@
 }
 
 .src-menu-area-vertical {
+    float: left;
     width: 200px;
     min-height: 100vh;
     padding-top: 30px;
@@ -120,4 +121,16 @@
 .src-fade-in-animation.ng-hide {
     -ms-opacity: 0;
     opacity: 0;
+}
+
+.src-view {
+    margin-left: 200px;
+    padding: 20px;
+    background-color: #ccc;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+.src-view-full-width {
+    margin-left: 0;
 }

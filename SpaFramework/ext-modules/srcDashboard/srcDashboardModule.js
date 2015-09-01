@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('srcDashboard', []);
+        .module('srcDashboard', ['gridster']);
         
 
     //srcDashboardModule.$inject = ['$http'];
