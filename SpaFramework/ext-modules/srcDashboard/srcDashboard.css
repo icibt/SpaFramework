@@ -34,6 +34,10 @@
     padding-bottom: 1px;
 }
 
+.src-widget-body {
+    position: relative;
+}
+
 .src-dashboard-header {
     font-size: 20px;
     border-bottom: 1px solid #444;
@@ -44,4 +48,33 @@
     min-height: 50px;
     padding: 8px;
     padding-left: 20px;
+}
+
+.src-dashboard-controls {
+    float: right;
+}
+
+.src-widget-menu-area {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    font-size: 22px;
+    z-index: 1001;
+}
+
+.src-widget-menu-area .dropdown-menu {
+    left: -20px;
+    padding-left: 15px;
+}
+
+.src-widget-menu-area a {
+    color: white;
+}
+
+.src-widget-menu-area i {
+    cursor: pointer;
+}
+
+.dropdown-backdrop {
+    position: static;
 }

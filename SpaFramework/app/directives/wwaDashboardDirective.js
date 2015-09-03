@@ -13,25 +13,99 @@ angular.module('app').directive('wwaDashboard', ['$timeout',function($timeout) {
                 margins: [20, 20],
                 outerMargin: false,
                 pushing: true,
-                floating: true,
+                floating: false,
                 swapping: false
             };
+
+            scope.widgetDefinitions = [
+                {
+                    title: 'Temperature',
+                    settings: {
+                        sizeX: 3,
+                        sizeY: 3,
+                        minSizeX: 2,
+                        minSizeY: 2,
+                        template: '<wwa-temperature></wwa-temperature>',
+                        widgetSettings: {
+                            id: 1000,
+                            templateUrl: 'app/dialogs/wwaSelectLocationTemplate.html',
+                            controller: 'wwaSelectLocationController'
+                        }
+                    }
+                },
+                {
+                    title: 'Employee',
+                    settings: {
+                        sizeX: 3,
+                        sizeY: 2,
+                        template: '<wwa-employee></wwa-employee>',
+                        widgetSettings: {
+                            id: 5001,
+                            templateUrl: 'app/dialogs/wwaSelectEmployeeTemplate.html',
+                            controller: 'wwaSelectEmployeeController'
+                        }
+                    }
+                },
+                {
+                    title: 'Inventory',
+                    settings: {
+                        sizeX: 5,
+                        sizeY: 3,
+                        minSizeX: 2,
+                        minSizeY: 2,
+                        template: '<wwa-inventory></wwa-inventory>',
+                        widgetSettings: {
+                            id: 1002,
+                            templateUrl: 'app/dialogs/wwaSelectLocationTemplate.html',
+                            controller: 'wwaSelectLocationController'
+                        }
+                    }
+                }
+            ];
 
             scope.widgets = [
             {
                 title: 'First one',
                 sizeX: 3,
                 sizeY: 3,
+                minSizeX: 2,
+                minSizeY: 2,
                 row: 0,
-                col: 0
-            },
-            {
+                col: 0,
+                template: '<wwa-temperature></wwa-temperature>',
+                widgetSettings: {
+                    id: 1000,
+                    templateUrl: 'app/dialogs/wwaSelectLocationTemplate.html',
+                    controller: 'wwaSelectLocationController'
+                }
+            }, {
                 title: 'Second',
-                sizeX: 2,
-                sizeY: 4,
+                sizeX: 3,
+                sizeY: 2,
                 row: 0,
-                col: 5
-            }];
+                col: 5,
+                template: '<wwa-employee></wwa-employee>',
+                widgetSettings: {
+                    id: 5001,
+                    templateUrl: 'app/dialogs/wwaSelectEmployeeTemplate.html',
+                    controller: 'wwaSelectEmployeeController'
+                }
+            }, {
+                title: 'First one',
+                sizeX: 5,
+                sizeY: 3,
+                minSizeX: 2,
+                minSizeY: 2,
+                row: 5,
+                col: 5,
+                template: '<wwa-inventory></wwa-inventory>',
+                widgetSettings: {
+                    id: 1002,
+                    templateUrl: 'app/dialogs/wwaSelectLocationTemplate.html',
+                    controller: 'wwaSelectLocationController'
+                }
+            }
+            ];
         }
        
     };
